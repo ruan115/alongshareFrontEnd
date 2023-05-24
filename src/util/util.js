@@ -106,10 +106,8 @@ export function removeInfo() {
   Cookies.remove("token");
   if (localStorage.lang=='kr'){
     store.commit('setMenuListData', store.state.map.menuListLogin)
-  }else if (localStorage.lang=='en'){
+  }else {
     store.commit('setMenuListData', store.state.map.menuListLoginEn)
-}else if (localStorage.lang=='it'){
-    store.commit('setMenuListData', store.state.map.menuListLoginIt)
-}
+  }
   return null
 }

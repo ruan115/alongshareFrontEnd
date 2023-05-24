@@ -119,9 +119,6 @@ export function getGoodsspuById(data) {
 export function orderSubmit(data) {
     return axios.post(`${API.orderSubmit}`,data)
 }
-export function payssion(data) {
-    return axios.post(`${API.payssion}`,data)
-}
 export function orderRenew(data) {
     return axios.post(`${API.orderRenew}`,data)
 }

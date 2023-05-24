@@ -8,8 +8,8 @@
                             <div style="width: 90%;color: white;display: flex;flex-wrap: nowrap;justify-content: space-around;height: 70px;">
                                 <span style="font-family: DIN-Bold-;font-weight: bolder">Netflix-<span style="font-family: MingLiU-ExtB;font-weight: normal">ALONGSHAR VIP</span></span>
                                 <!-- <el-button style="background-color: #4A9F9C;border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">Renew now</el-button> -->
-                                <el-button style="background-color: #4A9F9C;border: 0;height: 30px;" type="primary"
-                                           size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">계속 구매</el-button>
+<!--                                <el-button style="background-color: #4A9F9C;border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">계속 구매</el-button>-->
+                                <el-button style="background-color: #4A9F9C;border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">{{$t('subscribe.renewnow')}}</el-button>
                             </div>
                         </div>
                         <div class="justify-center" style="width: 100%;position: absolute;top: 100px;z-index: 999">
@@ -18,20 +18,21 @@
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/noreplace.png" width="100%">
                                         <!-- <span class="textdesc">Renew the same subscription without changing</span> -->
-                                        <span class="textdesc">같은 제품을 계속 구매</span>
+<!--                                        <span class="textdesc">같은 제품을 계속 구매</span>-->
+                                        <span class="textdesc">{{$t('subscribe.subscription')}}</span>
 
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/4k.png" width="100%">
                                         <!-- <span class="textdesc">4K+HDR HD, independent viewing record</span> -->
-                                        <span class="textdesc">4K+HDR HD, 독립 시청 기록</span>
-
+<!--                                        <span class="textdesc">4K+HDR HD, 독립 시청 기록</span>-->
+                                        <span class="textdesc">{{$t('subscribe.independent')}}</span>
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/refundensure.png" width="100%">
                                         <!-- <span class="textdesc">money-back guarantee</span> -->
-                                        <span class="textdesc">환불 보증</span>
-
+<!--                                        <span class="textdesc">환불 보증</span>-->
+                                        <span class="textdesc">{{$t('subscribe.guarantee')}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +41,8 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Time left</span> -->
-                                    <span style="color: black">남은 시간</span>
+<!--                                    <span style="color: black">남은 시간</span>-->
+                                    <span style="color: black">{{$t('subscribe.timeleft')}}</span>
                                     <!--倒计时  剩余时间-->
                                     <span style="color: red">{{item.ext1}}</span>
                                 </div>
@@ -48,21 +50,24 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account opening time</span> -->
-                                    <span style="color: black">계좌 개설 시간</span>
+<!--                                    <span style="color: black">계좌 개설 시간</span>-->
+                                    <span style="color: black">{{$t('subscribe.openingtime')}}</span>
                                     <span style="color: #8E8E8E">{{item.startTime}}</span>
                                 </div>
                             </div>
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">End Time</span> -->
-                                    <span style="color: black">종료 시간</span>
+<!--                                    <span style="color: black">종료 시간</span>-->
+                                    <span style="color: black">{{$t('subscribe.endtime')}}</span>
                                     <span style="color: #8E8E8E">{{item.endTime}}</span>
                                 </div>
                             </div>
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account</span> -->
-                                    <span style="color: black">계정</span>
+<!--                                    <span style="color: black">계정</span>-->
+                                    <span style="color: black">{{$t('subscribe.account')}}</span>
                                     <span style="color: #8E8E8E">{{item.loginemail}}</span>
                                 </div>
                             </div>
@@ -70,7 +75,8 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%" class="psdinput">
                                         <!-- <span style="color: black">Password</span> -->
-                                        <span style="color: black">비밀번호</span>
+<!--                                        <span style="color: black">비밀번호</span>-->
+                                        <span style="color: black">{{$t('subscribe.password')}}</span>
                                         <span style="color: #8E8E8E">
                                             <el-input type="password" v-model="item.loginpwd" show-password></el-input>
                                         </span>
@@ -84,19 +90,23 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%">
                                         <!-- <span style="color: black">Profile</span> -->
-                                        <span style="color: black">소개</span>
-                                        <span style="color: #8E8E8E">사용 해주세요 NO.
+<!--                                        <span style="color: black">소개</span>-->
+                                        <span style="color: black">{{$t('subscribe.profile')}}</span>
+<!--                                        <span style="color: #8E8E8E">사용 해주세요 NO.-->
+                                        <span style="color: #8E8E8E">{{$t('subscribe.pleaseuse')}} NO.
 
                                             <span style="background-color: #5E2D82;padding:2px 5px;color: white">{{item.seatno+1}}</span>
                                             <!-- sub account</span> -->
-                                            서브 계정</span>
+<!--                                            서브 계정</span>-->
+                                            {{$t('subscribe.subaccount')}}</span>
 
                                     </div>
                                     <div style="height: 30px;margin-top: 10px;">
                                         <el-button style="height: 30px;border: 1px solid #8E8E8E;background-color: #ffffff;color: #8E8E8E" type="primary" size="small" round @click="remind(item)">
                                             <icon-font type="icon-jinggao" style="margin-right: 5px;"/>
                                             <!-- My profile is misused by someone! -->
-                                            내 프로필이 누군가에 의해 오용되었습니다！
+<!--                                            내 프로필이 누군가에 의해 오용되었습니다！-->
+                                            {{$t('subscribe.myprofile')}}
                                         </el-button>
                                     </div>
                                     <div style="display: flex;justify-content: space-between;width: 100%;margin-top: 20px;">
@@ -137,13 +147,15 @@
                         <div style="width: 100%;font-size: 16px;color: white">
                             <div class="justify-center">
                                 <div style="width: 80%;display: flex;justify-content: space-around;height: 60px;line-height: 60px;">
-                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">Renew</span>
+<!--                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">Renew</span>-->
+                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">{{$t('subscribe.renew')}}</span>
                                     <div class="dashed"></div>
                                     <!-- <router-link to="help" style="color: white">Help</router-link> -->
                                     <!-- <router-link to="help" style="color: white">돕다</router-link>
                                     <div class="dashed"></div> -->
                                     <!-- <router-link to="aftersales" style="color: white">After sales</router-link> -->
-                                    <router-link to="aftersales" style="color: white">애프터 서비스</router-link>
+<!--                                    <router-link to="aftersales" style="color: white">애프터 서비스</router-link>-->
+                                    <router-link to="aftersales" style="color: white">{{$t('subscribe.aftersales')}}</router-link>
                                 </div>
                             </div>
                         </div>
@@ -156,19 +168,20 @@
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.Do not modify/delete other sub-accounts</span></p>
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.Do not modify subscription-related information</span></p>
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p> -->
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.Please use your own sub account according to the serial number</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라
-                                        본인 서브계정을 이용해주세요.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.Do not modify/delete other sub-accounts</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을
-                                        수정/삭제하지 마십시오.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.Do not modify subscription-related information</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보
-                                        수정 금지</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가
-                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이
-                                        필요 없습니다.</span></p>
+
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.yourownsub')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라-->
+<!--                                        본인 서브계정을 이용해주세요.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.delete')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을-->
+<!--                                        수정/삭제하지 마십시오.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.modifysubscription')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보-->
+<!--                                        수정 금지</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.reminder')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가-->
+<!--                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이-->
+<!--                                        필요 없습니다.</span></p>-->
                             </div>
                         </div>
                     </div>
@@ -180,8 +193,7 @@
                             <div style="width: 90%;color: white;display: flex;flex-wrap: nowrap;justify-content: space-around;height: 70px;">
                                 <span style="font-family: DIN-Bold-;font-weight: bolder">Disney-<span style="font-family: MingLiU-ExtB;font-weight: normal">ALONGSHAR VIP</span></span>
                                 <!-- <el-button style="background: linear-gradient(316deg, #1893C2 0%, #90DFF8 100%);box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">renew now</el-button> -->
-                                <el-button style="background: linear-gradient(316deg, #1893C2 0%, #90DFF8 100%);box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">계속
-                                    구매</el-button>
+                                <el-button style="background: linear-gradient(316deg, #1893C2 0%, #90DFF8 100%);box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">{{$t('subscribe.renewnow')}}</el-button>
                             </div>
                         </div>
                         <div class="justify-center" style="width: 100%;position: absolute;top: 100px;z-index: 999">
@@ -190,19 +202,19 @@
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/noreplace.png" width="100%">
                                         <!-- <span class="textdesc">Renew the same subscription without changing</span> -->
-                                        <span class="textdesc">같은 제품을 계속 구매</span>
+                                        <span class="textdesc">{{$t('subscribe.subscription')}}</span>
 
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/4k.png" width="100%">
                                         <!-- <span class="textdesc">4K+HDR HD, independent viewing record</span> -->
-                                        <span class="textdesc">4K+HDR HD, 독립 시청 기록</span>
+                                        <span class="textdesc">{{$t('subscribe.independent')}}</span>
 
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/refundensure.png" width="100%">
                                         <!-- <span class="textdesc">money-back guarantee</span> -->
-                                        <span class="textdesc">환불 보증</span>
+                                        <span class="textdesc">{{$t('subscribe.guarantee')}}</span>
 
                                     </div>
                                 </div>
@@ -212,7 +224,7 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Time left</span> -->
-                                    <span style="color: black">남은 시간</span>
+                                    <span style="color: black">{{$t('subscribe.timeleft')}}</span>
                                     <!--倒计时  剩余时间-->
                                     <span style="color: red">{{item.ext1}}</span>
                                 </div>
@@ -220,21 +232,21 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account opening time</span> -->
-                                    <span style="color: black">계좌 개설 시간</span>
+                                    <span style="color: black">{{$t('subscribe.openingtime')}}</span>
                                     <span style="color: #8E8E8E">{{item.startTime}}</span>
                                 </div>
                             </div>
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">End Time</span> -->
-                                    <span style="color: black">종료 시간</span>
+                                    <span style="color: black">{{$t('subscribe.endtime')}}</span>
                                     <span style="color: #8E8E8E">{{item.endTime}}</span>
                                 </div>
                             </div>
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account</span> -->
-                                    <span style="color: black">계정</span>
+                                    <span style="color: black">{{$t('subscribe.account')}}</span>
                                     <span style="color: #8E8E8E">{{item.loginemail}}</span>
                                 </div>
                             </div>
@@ -242,7 +254,7 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%" class="psdinput">
                                         <!-- <span style="color: black">Password</span> -->
-                                        <span style="color: black">비밀번호</span>
+                                        <span style="color: black">{{$t('subscribe.password')}}</span>
                                         <span style="color: #8E8E8E">
                                             <el-input type="password" v-model="item.loginpwd" show-password></el-input>
                                         </span>
@@ -256,16 +268,17 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%">
                                         <!-- <span style="color: black">Profile</span> -->
-                                        <span style="color: black">소개</span>
+                                        <span style="color: black">{{$t('subscribe.profile')}}</span>
                                         <!-- <span style="color: #8E8E8E">please use NO. <span style="background-color: #3C85D5;padding:2px 5px;color: white">{{item.seatno+1}}</span> sub account</span> -->
-                                        <span style="color: #8E8E8E">사용 해주세요 NO. <span style="background-color: #3C85D5;padding:2px 5px;color: white">{{item.seatno+1}}</span> 서브 계정</span>
+                                        <span style="color: #8E8E8E">{{$t('subscribe.pleaseuse')}} NO. <span style="background-color: #3C85D5;padding:2px 5px;color: white">{{item.seatno+1}}</span> {{$t('subscribe.subaccount')}} </span>
 
                                     </div>
                                     <div style="height: 30px;margin-top: 10px;">
                                         <el-button style="height: 30px;border: 1px solid #8E8E8E;background-color: #ffffff;color: #8E8E8E" type="primary" size="small" round @click="remind(item)">
                                             <icon-font type="icon-jinggao" style="margin-right: 5px;"/>
                                             <!-- My profile is misused by someone! -->
-                                            내 프로필이 누군가에 의해 오용되었습니다！
+<!--                                            내 프로필이 누군가에 의해 오용되었습니다！-->
+                                            {{$t('subscribe.myprofile')}}
                                         </el-button>
                                     </div>
                                     <div style="display: flex;justify-content: space-between;width: 100%;margin-top: 20px;">
@@ -307,14 +320,14 @@
                             <div class="justify-center">
                                 <div style="width: 80%;display: flex;justify-content: space-around;height: 60px;line-height: 60px;">
                                     <!-- <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">Renew</span> -->
-                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">재계약</span>
+                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer"> {{$t('subscribe.renew')}}</span>
                                     <div class="dashed"></div>
                                     <!-- <router-link to="help" style="color: white">Help</router-link> -->
                                     <!-- <router-link to="help" style="color: white">돕다</router-link> -->
 
                                     <div class="dashed"></div>
                                     <!-- <router-link to="aftersales" style="color: white">After sales</router-link> -->
-                                    <router-link to="aftersales" style="color: white">애프터 서비스</router-link>
+                                    <router-link to="aftersales" style="color: white">{{$t('subscribe.aftersales')}}</router-link>
                                 </div>
                             </div>
                         </div>
@@ -329,19 +342,19 @@
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p>
                             </div> -->
                             <div style="color: white;font-size: 12px;width: 80%;margin-top: 3%">
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.Please use your own sub account according to the serial number</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라
-                                        본인 서브계정을 이용해주세요.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.Do not modify/delete other sub-accounts</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을
-                                        수정/삭제하지 마십시오.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.Do not modify subscription-related information</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보
-                                        수정 금지</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가
-                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이
-                                        필요 없습니다.</span></p>
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.yourownsub')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라-->
+<!--                                        본인 서브계정을 이용해주세요.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.delete')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을-->
+<!--                                        수정/삭제하지 마십시오.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.modifysubscription')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보-->
+<!--                                        수정 금지</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.reminder')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가-->
+<!--                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이-->
+<!--                                        필요 없습니다.</span></p>-->
                             </div>
                         </div>
                     </div>
@@ -352,7 +365,7 @@
                         <div class="justify-center" style="width: 100%;height: 50px;margin-top: 6%">
                             <div style="width: 90%;color: white;display: flex;flex-wrap: nowrap;justify-content: space-around;height: 70px;">
                                 <span style="font-family: DIN-Bold-;font-weight: bolder;color: black">{{item.carname}}</span>
-                                <el-button style="background: linear-gradient(270deg, #43D98E 0%, #B4F4D4 100%);border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">renew now</el-button>
+                                <el-button style="background: linear-gradient(270deg, #43D98E 0%, #B4F4D4 100%);border: 0;height: 30px;" type="primary" size="small" round @click="getGoodsspuByIdInfo(item.goodsSpu.id)">{{$t('subscribe.renewnow')}}</el-button>
                             </div>
                         </div>
                         <div class="justify-center" style="width: 100%;">
@@ -362,18 +375,18 @@
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/noreplace-green.png" width="100%">
                                         <!-- <span class="textdesc">Renew the same subscription without changing</span> -->
-                                        <span class="textdesc">같은 제품을 계속 구매</span>
+                                        <span class="textdesc">{{$t('subscribe.subscription')}}</span>
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/4k-green.png" width="100%">
                                         <!-- <span class="textdesc">4K+HDR HD, independent viewing record</span> -->
-                                        <span class="textdesc">4K+HDR HD, 독립 시청 기록</span>
+                                        <span class="textdesc">{{$t('subscribe.independent')}}</span>
 
                                     </div>
                                     <div style="width: 25%;">
                                         <img src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/refundensure-green.png" width="100%">
                                         <!-- <span class="textdesc">money-back guarantee</span> -->
-                                        <span class="textdesc">환불 보증</span>
+                                        <span class="textdesc">{{$t('subscribe.guarantee')}}</span>
 
                                     </div>
                                 </div>
@@ -383,7 +396,7 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Time left</span> -->
-                                    <span style="color: black">남은 시간</span>
+                                    <span style="color: black">{{$t('subscribe.timeleft')}}</span>
                                     <!--倒计时  剩余时间-->
                                     <span style="color: red">{{item.ext1}}</span>
                                 </div>
@@ -391,14 +404,14 @@
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account opening time</span> -->
-                                    <span style="color: black">계좌 개설 시간</span>
+                                    <span style="color: black">{{$t('subscribe.openingtime')}}</span>
                                     <span style="color: #8E8E8E">{{item.startTime}}</span>
                                 </div>
                             </div>
                             <div class="justify-center">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">End Time</span> -->
-                                    <span style="color: black">종료 시간</span>
+                                    <span style="color: black">{{$t('subscribe.endtime')}}</span>
 
                                     <span style="color: #8E8E8E">{{item.endTime}}</span>
                                 </div>
@@ -406,7 +419,7 @@
                             <div class="justify-center" v-if="item.goodsSpu.goodsname.toLowerCase().indexOf('youtube')==-1">
                                 <div style="width: 80%;padding: 10px;margin:5px;display: flex;justify-content: space-between;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <!-- <span style="color: black">Account</span> -->
-                                    <span style="color: black">계정</span>
+                                    <span style="color: black">{{$t('subscribe.account')}}</span>
 
                                     <span style="color: #8E8E8E">{{item.loginemail}}</span>
                                 </div>
@@ -415,7 +428,7 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%" class="psdinput">
                                         <!-- <span style="color: black">Password</span> -->
-                                        <span style="color: black">비밀번호</span>
+                                        <span style="color: black">{{$t('subscribe.password')}}</span>
                                         <span style="color: #8E8E8E">
                                             <el-input type="password" v-model="item.loginpwd" show-password></el-input>
                                         </span>
@@ -429,16 +442,17 @@
                                 <div style="width: 80%;padding: 10px;margin:5px;border: 1px solid #ebeef5;border-radius: 3px;">
                                     <div style="display: flex;justify-content: space-between;width: 100%">
                                         <!-- <span style="color: black">Profile</span> -->
-                                        <span style="color: black">소개</span>
+                                        <span style="color: black">{{$t('subscribe.profile')}}</span>
                                         <!-- <span style="color: #8E8E8E">please use NO. <span style="background-color: #43D98E;padding:2px 5px;color: white">{{item.seatno+1}}</span> sub account</span> -->
-                                        <span style="color: #8E8E8E">사용 해주세요 NO. <span style="background-color: #43D98E;padding:2px 5px;color: white">{{item.seatno+1}}</span> 서브 계정</span>
+                                        <span style="color: #8E8E8E">{{$t('subscribe.pleaseuse')}} NO. <span style="background-color: #43D98E;padding:2px 5px;color: white">{{item.seatno+1}}</span> {{$t('subscribe.subaccount')}}</span>
 
                                     </div>
                                     <div style="height: 30px;margin-top: 10px;">
                                         <el-button style="height: 30px;border: 1px solid #8E8E8E;background-color: #ffffff;color: #8E8E8E" type="primary" size="small" round @click="remind(item)">
                                             <icon-font type="icon-jinggao" style="margin-right: 5px;"/>
                                             <!-- My profile is misused by someone! -->
-                                            내 프로필이 누군가에 의해 오용되었습니다！
+<!--                                            내 프로필이 누군가에 의해 오용되었습니다！-->
+                                            {{$t('subscribe.myprofile')}}
                                         </el-button>
                                     </div>
                                     <div style="display: flex;justify-content: space-between;width: 100%;margin-top: 20px;">
@@ -486,8 +500,11 @@
                                                 그렇지 않으면 가족에서 쫓겨날 것입니다. 도움이 필요하시면 이메일을 통해 Alongshare 고객 서비스에 문의하십시오.
                                                 play.google.com 계정 국가/지역을 확인하세요: ES, FR, PL, IT, DE, NL, GB, CA, US, JP, GR, CH, LT, PA, SG, CZ, SE,
                                                 PT, BE , 일리노이. 문제가 발생하면 시간 내에 티켓을 통해 직원에게 문의하십시오.
-                                                <router-link to="aftersales" style="margin: 5px;color: #217CD6">애프터 서비스</router-link>
-                                                지원 페이지.
+                                                {{$t('subscribe.youtubeloginemail')}}
+<!--                                                <router-link to="aftersales" style="margin: 5px;color: #217CD6">애프터 서비스</router-link>-->
+                                                <router-link to="aftersales" style="margin: 5px;color: #217CD6">{{$t('subscribe.aftersalesservice')}}</router-link>
+<!--                                                지원 페이지.-->
+                                                {{$t('subscribe.support')}}
                                             </div>
                                         </div>
                                     </div>
@@ -497,7 +514,8 @@
                                                 <el-input v-model="form.content" placeholder="YouTube login email"></el-input>
                                             </el-form-item>
                                             <!-- <el-button type="primary" style="width: 100%" @click="submitUser(item.id)">submit</el-button> -->
-                                            <el-button type="primary" style="width: 100%" @click="submitUser(item.id)">제출하다</el-button>
+<!--                                            <el-button type="primary" style="width: 100%" @click="submitUser(item.id)">제출하다</el-button>-->
+                                            <el-button type="primary" style="width: 100%" @click="submitUser(item.id)">{{$t('subscribe.submit')}}</el-button>
                                         </el-form>
                                     </div>
                                 </div>
@@ -507,11 +525,11 @@
                             <div class="justify-center">
                                 <div style="width: 80%;display: flex;justify-content: space-around;height: 60px;line-height: 60px;">
                                     <!-- <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">Renew</span> -->
-                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">재계약</span>
+                                    <span @click="getGoodsspuByIdInfo(item.goodsSpu.id)" style="cursor: pointer">{{$t('subscribe.renew')}}</span>
                                     <div class="dashed"></div>
                                     <!-- <router-link to="help" style="color: white">Help</router-link>
                                     <div class="dashed"></div> -->
-                                    <router-link to="aftersales" style="color: white">After sales</router-link>
+                                    <router-link to="aftersales" style="color: white">{{$t('subscribe.aftersales')}}</router-link>
                                 </div>
                             </div>
                         </div>
@@ -525,19 +543,19 @@
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.Do not modify subscription-related information</span></p>
                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p> -->
                             <div style="color: white;font-size: 12px;width: 80%;margin-top: 3%">
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.Please use your own sub account according to the serial number</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라
-                                        본인 서브계정을 이용해주세요.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.Do not modify/delete other sub-accounts</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을
-                                        수정/삭제하지 마십시오.</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.Do not modify subscription-related information</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보
-                                        수정 금지</span></p>
-                                <!-- <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.</span></p> -->
-                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가
-                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이
-                                        필요 없습니다.</span></p>
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.yourownsub')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">1.일련번호에 따라-->
+<!--                                        본인 서브계정을 이용해주세요.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.delete')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">2.다른 하위 계정을-->
+<!--                                        수정/삭제하지 마십시오.</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.modifysubscription')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">3.구독 관련 정보-->
+<!--                                        수정 금지</span></p>-->
+                                 <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">{{$t('subscribe.reminder')}}</span></p>
+<!--                                <p><span style="font-size: 10pt; font-family: 'book antiqua', palatino, serif;">알림 ：어떤 문제가-->
+<!--                                        발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이-->
+<!--                                        필요 없습니다.</span></p>-->
                             </div>
                         </div>
                     </div>
@@ -707,7 +725,8 @@
     </div>
     <div class="justify-center" style="background-color: white;width: 100%;height: 100vh;font-weight: bolder;font-size: 2em;" v-else>
         <!-- <p style="margin-top: 45vh">There are no subscriptions yet, please hurry to buy it</p> -->
-        <p style="margin-top: 45vh">아직 구독이 안 되었으니 서둘러 구입해 주세요</p>
+<!--        <p style="margin-top: 45vh">아직 구독이 안 되었으니 서둘러 구입해 주세요</p>-->
+        <p style="margin-top: 45vh">{{$t('subscribe.buyit')}}</p>
     </div>
 </template>
 
@@ -744,7 +763,7 @@
                 drawer4:false,
                 payReslutIcon:"https://kilogod.oss-cn-shenzhen.aliyuncs.com/alongshare/paysuccess.png",
                 // payReslutTitle:"Payment succeeded",
-                payReslutTitle: "결제 성공",
+                payReslutTitle: this.$t('subscribe.paymentsucceeded'),
                 price:"",
                 originalprice:"",
                 month:"",
@@ -767,32 +786,33 @@
                     //     {required: true, message: 'Please select the payment method', trigger: 'blur'},],
                     skuid: [
                         // { required: true, message: 'Please select a month', trigger: 'blur' },],
-                        { required: true, message: '월을 선택하세요.', trigger: 'blur' },],
+                        // { required: true, message: '월을 선택하세요.', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.month'), trigger: 'blur' },],
                     num: [
                         // { required: true, message: 'Please select the number of screens', trigger: 'blur' },],
-                        { required: true, message: '하위 계정 수를 선택하세요.', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.number'), trigger: 'blur' },],
                     buytype: [
                         // { required: true, message: 'Please select the purchase type', trigger: 'blur' },],
-                        { required: true, message: '구매유형을 선택해주세요', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.purchase'), trigger: 'blur' },],
                     paycode: [
                         // { required: true, message: 'Please select the payment method', trigger: 'blur' },],
-                        { required: true, message: '결제수단을 선택해주세요', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.payment'), trigger: 'blur' },],
                 },
                 form3:this.initform3(),
                 rules3:{
                     name: [
                         // { required: true, message: 'Please enter Name on card', trigger: 'blur' },],
-                        { required: true, message: '카드 소유자 이름을 입력하십시오', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.name'), trigger: 'blur' },],
                     cardnumber: [
                         // { required: true, message: 'Please enter Card number', trigger: 'blur' },],
-                        { required: true, message: '카드번호를 입력해주세요', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.card'), trigger: 'blur' },],
                     cvv: [
-                        { required: true, message: 'Please enter CVV', trigger: 'blur' },
+                        { required: true, message: this.$t('subscribe.cvv'), trigger: 'blur' },
                         { validator: validateNumber, trigger: 'blur' }
                     ],
                     date: [
                         // { required: true, message: 'Please enter Expiry date', trigger: 'blur' },],
-                        { required: true, message: '만료 날짜를 입력하세요.', trigger: 'blur' },],
+                        { required: true, message: this.$t('subscribe.expirydate'), trigger: 'blur' },],
                 },
             }
         },
@@ -812,7 +832,8 @@
                 let  res = await insertWorkorder(this.form)
                 if (res.status == "200") {
                     // MessageSuccess("처리 상태가 제출되었습니다. 작업 주문서에서 처리 상태를 확인하십시오.")
-                    MessageSuccess("처리 상태가 제출되었습니다. 작업 주문서에서 처리 상태를 확인하십시오.")
+                    // MessageSuccess("처리 상태가 제출되었습니다. 작업 주문서에서 처리 상태를 확인하십시오.")
+                    MessageSuccess(this.$t('subscribe.processing'))
                     this.form=this.initform()
                     this.$refs.ruleForm.clearValidate();
                 } else {
@@ -891,7 +912,7 @@
                     this.drawer4=true
                     this.payReslutIcon="https://kilogod.oss-cn-shenzhen.aliyuncs.com/alongshare/paysuccess.png"
                     // this.payReslutTitle="Payment succeeded"
-                    this.payReslutTitle = "결제 성공"
+                    this.payReslutTitle = this.$t('subscribe.paymentsucceeded')
 
                 } else {
                     loading.close()
@@ -922,7 +943,7 @@
                 let code = this.form1.discountcode.trim()
                 if ("" == code || null == code) {
                     // MessageError("Discount code cannot be empty!")
-                    MessageError("할인 코드는 비워둘 수 없습니다!")
+                    MessageError(this.$t('subscribe.cannotempty'))
 
                     return
                 }
@@ -1039,18 +1060,18 @@
             },
             resetpwd(val){
                 // this.$confirmel('The original password for this operation will no longer be used, whether to continue?', 'Tips', {
-                this.$confirmel('이 작업의 원래 암호는 더 이상 사용되지 않습니다. 계속하시겠습니까?', '팁', {
+                this.$confirmel(this.$t('subscribe.originalpassword'), this.$t('luckdraw.tips'), {
                     // confirmButtonText: 'Confirm',
-                    confirmButtonText: '확인',
+                    confirmButtonText: this.$t('luckdraw.comfirm'),
                     // cancelButtonText: 'Cancel',
-                    cancelButtonText: '취소',
+                    cancelButtonText: this.$t('luckdraw.cancel'),
 
                     type: 'warning'
                 }).then(() => {
                     this.toResetpwd(val)
                 }).catch(() => {
                     // MessageInfo("Canceled");
-                    MessageInfo("취소");
+                    MessageInfo(this.$t('luckdraw.cancel'));
 
                 });
             },
@@ -1073,7 +1094,7 @@
             async toResetpwd1(val) {
                 if (!(/^(?![a-zA-Z]+$)(?![A-Z0-9]+$)(?![A-Z\W_!@#$%^&*`~()-+=]+$)(?![a-z0-9]+$)(?![a-z\W_!@#$%^&*`~()-+=]+$)(?![0-9\W_!@#$%^&*`~()-+=]+$)[a-zA-Z0-9\W_!@#$%^&*`~()-+=]{8,16}$/.test(val.loginpwd))) {
                     // MessageError('The password meets uppercase and lowercase letters, numbers and special characters, any combination of three of them, and the length is between 8 and 16!');
-                    MessageError('비밀번호는 대문자와 소문자, 숫자, 특수문자 중 3가지 조합을 모두 충족하며, 길이는 8자에서 16자 사이!')
+                    MessageError(this.$t('subscribe.passwordmeets'))
 
                     return
                 } else {

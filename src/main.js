@@ -61,8 +61,10 @@ new Vue({
     // } else {
     //   this.$router.push({ path: "/backhome" });
     // }
+    console.log(window.location.href)
     if (window.location.href.indexOf("?usercode=")>-1){
-      let usercode=this.$route.query.usercode;
+      let usercode=window.location.href.substring(32,48)
+      console.log(usercode)
       if (usercode){
         this.$cookies.set("usercode",usercode)
       }

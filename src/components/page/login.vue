@@ -95,12 +95,12 @@
                     <el-input :placeholder="$t('login.password')" clearable autocomplete="off" v-model='formReg.password'
                         show-password />
                 </el-form-item>
-                <el-form-item prop='agapassword'>
+                <el-form-item prop='agapassword' style="margin-top: 32px;">
                     <el-input :placeholder="$t('login.password')" clearable autocomplete="off" v-model='formReg.agapassword'
                         show-password />
                 </el-form-item>
             </el-form>
-            <div class="justify-center">
+            <div class="justify-center" style="margin-top: 32px;">
                 <!-- <el-button type="primary" @click="submitReg" style="width: 80%;font-size: 1.2em" round>Register</el-button> -->
 <!--                <el-button type="primary" @click="submitReg" style="width: 80%;font-size: 1.2em" round>등록하다</el-button>-->
                 <el-button type="primary" @click="submitReg" style="width: 80%;font-size: 1.2em" round>{{$t('login.register')}}</el-button>
@@ -480,10 +480,8 @@ export default {
             });
             if (localStorage.lang=='kr'){
                 store.commit('setMenuListData', store.state.map.menuListLogin)
-            }else if (localStorage.lang=='en'){
+            }else {
                 store.commit('setMenuListData', store.state.map.menuListLoginEn)
-            }else if (localStorage.lang=='it'){
-                store.commit('setMenuListData', store.state.map.menuListLoginIt)
             }
 
             this.$router.push({ name: "home" });
@@ -516,9 +514,13 @@ export default {
         },
     },
     created() {
-        let usercode = this.$route.query.usercode;
-        if (usercode) {
-            this.$cookies.set("usercode", usercode)
+        console.log(window.location.href)
+        if (window.location.href.indexOf("?usercode=")>-1){
+            let usercode=window.location.href.substring(32,48)
+            console.log(usercode)
+            if (usercode){
+                this.$cookies.set("usercode",usercode)
+            }
         }
         let userInfo = getUserInfo()
         if (userInfo) {
@@ -526,10 +528,8 @@ export default {
         } else {
             if (localStorage.lang=='kr'){
                 store.commit('setMenuListData', store.state.map.menuListNoLogin)
-            }else if (localStorage.lang=='en'){
+            }else {
                 store.commit('setMenuListData', store.state.map.menuListNoLoginEn)
-            }else if (localStorage.lang=='it'){
-                store.commit('setMenuListData', store.state.map.menuListNoLoginIt)
             }
         }
     }

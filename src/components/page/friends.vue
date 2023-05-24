@@ -201,7 +201,7 @@
                     <el-form-item :label="$t('friends.accounttype')" prop='type' :label-width="formLabelWidth">
                     <!-- <el-form-item label='Account type' prop='type' :label-width="formLabelWidth"> -->
                         <el-select v-model="form.type" placeholder="please choose">
-                            <el-option v-for="item in accountTypeOptis" :key="item.value" :label="item.label"
+                            <el-option v-for="item in accountTypeOptions" :key="item.value" :label="item.label"
                                 :value="item.value">
                             </el-option>
                         </el-select>

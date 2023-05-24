@@ -65,8 +65,6 @@
                      <a-select-option value="kr"> 한국어 </a-select-option>
 <!--                     <a-select-option value="cn"> 中文/简体 </a-select-option>-->
                      <a-select-option value="en"> EngLish </a-select-option>
-                     <a-select-option value="it"> italian </a-select-option>
-
                  </a-select>
 
 <!--                 <span class="text_73">国家</span>-->

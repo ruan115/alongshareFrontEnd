@@ -4,11 +4,11 @@
             <el-tabs v-model="activeName" @tab-click="handleClick">
                 <el-tab-pane disabled></el-tab-pane>
                 <!-- <el-tab-pane label="Lottery" name="first" style="background-color: black"> -->
-                <el-tab-pane label="복권" name="first" style="background-color: black">
+                <el-tab-pane :label="$t('luckdraw.lotteryticket')" name="first" style="background-color: black">
                     <div style="width: 80%;margin-left: 10%;padding-top: 20px;">
                         <div style="line-height: 60px;">
                             <!-- <span style="color: white;font-size: 20px;">Integral：</span> -->
-                            <span style="color: white;font-size: 20px;">적분：</span>
+                            <span style="color: white;font-size: 20px;">{{$t('luckdraw.integral')}}：</span>
                             <span style="color: #43D98E;font-size: 36px;font-weight: bolder;">{{ integral }}</span>
                             <!--                            <el-button type="primary" round size="small" style="margin-left: 40px;">check in</el-button>-->
                         </div>
@@ -19,9 +19,10 @@
                                     <!-- Welcome to alongshare, this is our activity page, click on the card to draw prizes with one click,
                                     the awards include various free account packages,
                                     discount codes and other discounts, thank you for your support and trust. -->
-                                    alongshare에 오신 것을 환영합니다. 이것은 우리의 활동 페이지입니다. 카드를 클릭하면 한 번의 클릭으로 경품을 받을 수 있습니다.
-                                    보상에는 다양한 무료 계정 패키지가 포함되며,
-                                    할인 코드 및 기타 할인, 귀하의 지원과 신뢰에 감사드립니다.
+<!--                                    alongshare에 오신 것을 환영합니다. 이것은 우리의 활동 페이지입니다. 카드를 클릭하면 한 번의 클릭으로 경품을 받을 수 있습니다.-->
+<!--                                    보상에는 다양한 무료 계정 패키지가 포함되며,-->
+<!--                                    할인 코드 및 기타 할인, 귀하의 지원과 신뢰에 감사드립니다.-->
+                                    {{$t('luckdraw.welcome')}}
                                 </span>
                             </div>
                         </div>
@@ -39,23 +40,23 @@
                                             <p style="line-height: 35px;color: white" v-if="item.isprize == '1'">
                                                 {{ item.timelength }}</p>
                                             <!-- <p style="line-height: 35px;color: white" v-else>none</p> -->
-                                            <p style="line-height: 35px;color: white" v-else>없음</p>
+                                            <p style="line-height: 35px;color: white" v-else>{{$t('luckdraw.none')}}</p>
                                         </div>
                                     </div>
                                     <div class="justify-around" style="font-size: 12px;margin-top: 23%"
                                         v-if="item.isprize == '1'">
                                         <!-- <span style="color: white">Redemption code:<span
                                                 class="excode"> -->
-                                        <span style="color: white">상환 코드<span class="excode">
+                                        <span style="color: white">{{$t('luckdraw.redemptioncode')}}<span class="excode">
                                                 {{ item.excode }}</span></span>
                                         <!-- <span style="color: white;cursor: pointer" @click="copyexcode(item.excode)"
                                             @click.stop="copyexcode">copy</span> -->
                                         <span style="color: white;cursor: pointer" @click="copyexcode(item.excode)"
-                                            @click.stop="copyexcode">복사</span>
+                                            @click.stop="copyexcode">{{$t('luckdraw.copy')}}</span>
                                     </div>
                                     <div class="justify-around" style="font-size: 12px;margin-top: 23%" v-else>
                                         <!-- <p style="line-height: 35px;color: white" v-else>none</p> -->
-                                        <span style="color: white">없음</span>
+                                        <span style="color: white">{{$t('luckdraw.none')}}</span>
                                     </div>
                                 </div>
                             </transition>
@@ -63,7 +64,7 @@
                     </div>
                 </el-tab-pane>
                 <!-- <el-tab-pane label="Prize list" name="second"> -->
-                <el-tab-pane label="당첨 내역" name="second">
+                <el-tab-pane :label="$t('luckdraw.prizelist')" name="second">
                     <el-data-table ref="table" v-bind="tableConfig" :columns="columns"
                         style="margin-left: 30px;margin-top: 10px;width: 95%">
                     </el-data-table>
@@ -83,33 +84,43 @@ export default {
             {
                 value: "1",
                 // label:"not used"
-                label: "사용하지 않았다"
+                // label: "사용하지 않았다"
+                label: this.$t('luckdraw.notused')
             },
             {
                 value: "2",
                 // label:"Used"
-                label: "이미 사용 된"
-
+                // label: "이미 사용 된"
+                label: this.$t('luckdraw.used')
             },
             {
                 value: "3",
                 // label:"Expired"
-                label: "만료"
+                // label: "만료"
+                label: this.$t('luckdraw.expired')
             },
         ]
         const columns = [
             // {prop: 'id',label: 'Prize No'},
-            { prop: 'id', label: '상품번호' },
+            // { prop: 'id', label: '상품번호' },
+            { prop: 'id', label: this.$t('luckdraw.prizeno') },
 
             // {prop: 'name',label: 'Contents'},
-            { prop: 'name', label: '내용물' },
+            // { prop: 'name', label: '내용물' },
+            { prop: 'name', label: this.$t('luckdraw.contents') },
+
             // {prop: 'excode',label: 'Redemption code'},
-            { prop: 'excode', label: '상환 코드' },
+            // { prop: 'excode', label: '상환 코드' },
+            { prop: 'excode', label: this.$t('luckdraw.redemptioncode') },
+
             { prop: 'status', label: 'Status', formatter: row => this.statusState(row) },
             // {prop: 'exchangetime',label: 'Exchange date'},
-            { prop: 'exchangetime', label: '교환 날짜' },
+            // { prop: 'exchangetime', label: '교환 날짜' },
+            { prop: 'exchangetime', label: this.$t('luckdraw.exchangedate') },
+
             // {prop: 'createTime',label: 'createTime'},
-            { prop: 'createTime', label: '생성시간' },
+            // { prop: 'createTime', label: '생성시간' },
+            { prop: 'createTime', label: this.$t('luckdraw.createtime') },
         ]
         return {
             activeName: 'first',
@@ -126,7 +137,8 @@ export default {
                     {
                         type: 'primary',
                         // text: 'exchange',
-                        text: '환전',
+                        // text: '환전',
+                        text: this.$t('luckdraw.exchange'),
                         icon: 'el-icon-folder-checked',
                         disabled: (row) => {
                             if (row.status == '1') {
@@ -180,21 +192,21 @@ export default {
         openprize(num) {
             if (this.userinfo.integral < 10) {
                 // MessageError("Insufficient points!")
-                MessageError("불충분한 포인트!")
-
+                // MessageError("불충분한 포인트!")
+                MessageError(this.$t('luckdraw.insufficientpoints'))
             }
             // this.$confirmel('This operation will consume 10 points. Continue?', 'Tips', {
-            this.$confirmel('10포인트를 소모하시겠습니까?', '팁', {
+            this.$confirmel(this.$t('luckdraw.consumepoints'), this.$t('luckdraw.tips'), {
                 // confirmButtonText: 'comfirm',
-                confirmButtonText: '확인',
+                confirmButtonText: this.$t('luckdraw.comfirm'),
                 // cancelButtonText: 'cancel',
-                cancelButtonText: '취소',
+                cancelButtonText: this.$t('luckdraw.cancel'),
                 type: 'warning'
             }).then(() => {
                 this.luckdrawInfo(num)
             }).catch(() => {
                 // MessageInfo("Canceled");
-                MessageInfo("취소");
+                MessageInfo(this.$t('luckdraw.cancel'));
             });
         },
         async luckdrawInfo(num) {
@@ -206,10 +218,10 @@ export default {
                 this.getUserIntegralInfo()
                 if (res.data.isprize == '0') {
                     // MessageInfo("Fail to win a prize")
-                    MessageInfo("수상에 실패하다")
+                    MessageInfo(this.$t('luckdraw.failtowin'))
                 } else {
                     // MessageInfo("Congratulations on obtaining:" + res.data.prizepool.name + res.data.prizepool.timelength)
-                    MessageInfo("취득을 축하합니다:" + res.data.prizepool.name + res.data.prizepool.timelength)
+                    MessageInfo(this.$t('luckdraw.congratulations') + res.data.prizepool.name + res.data.prizepool.timelength)
                 }
             } else {
                 MessageError(res.msg)
@@ -220,13 +232,13 @@ export default {
                 function (e) {
                     console.log("copy arguments e:", e);
                     // MessageSuccess("Copy succeeded!");
-                    MessageError("복사 성공!");
+                    MessageError(this.$t('luckdraw.copysucceeded'));
 
                 },
                 function (e) {
                     console.log("copy arguments e:", e);
                     // MessageError("Copy failed!");
-                    MessageError("복사 실패!");
+                    MessageError(this.$t('luckdraw.copyfailed'));
                 }
             );
         },

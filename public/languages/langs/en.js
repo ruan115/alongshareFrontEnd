@@ -217,11 +217,94 @@ const en = {
         "passwordagain":"please enter password again",
         "verificationsend":"The verification code has been sent, pay attention to check",
     },
+    luckdraw:{
+        "lotteryticket":"Lottery ticket",
+        "integral":"integral",
+        "welcome":"Welcome to alongshare, this is our activity page, click on the card to draw prizes with one click,\n" +
+            "                                    the awards include various free account packages,\n" +
+            "                                    discount codes and other discounts, thank you for your support and trust.",
+        "none":"doesn't exist",
+        "redemptioncode":"redemption code",
+        "copy":"copy",
+        "prizelist":"Prize list",
+        "notused":"not used",
+        "used":"Used",
+        "expired":"Expired",
+
+        "prizeno":"Prize No",
+        "contents":"Contents",
+        "exchangedate":"Exchange date",
+        "createtime":"createTime",
+        "exchange":"exchange",
+        "insufficientpoints":"Insufficient points",
+        "consumepoints":"This operation will consume 10 points. Continue?",
+        "tips":"Tips",
+        "comfirm":"comfirm",
+        "cancel":"cancel",
+        "failtowin":"Fail to win a prize",
+        "congratulations":"Congratulations on obtaining",
+        "copysucceeded":"Copy succeeded!",
+        "copyfailed":"Copy failed!",
+
+    },
+    subscribe:{
+        "renewnow":"Renew now",
+        "subscription":"Renew the same subscription without changing",
+        "independent":"4K+HDR HD, independent viewing record",
+        "guarantee":"money-back guarantee",
+        "timeleft":"Time left",
+        "openingtime":"Account opening time",
+        "endtime":"End Time",
+        "account":"Account",
+        "password":"Password",
+        "profile":"Profile",
+        "pleaseuse":"please use",
+        "subaccount":"sub account",
+        "myprofile":"My profile is misused by someone!",
+        "renew":"Renew",
+        "aftersales":"After sales",
+
+        "yourownsub":"1.Please use your own sub account according to the serial number",
+        "delete":"2.Do not modify/delete other sub-accounts",
+        "modifysubscription":"3.Do not modify subscription-related information",
+        "reminder":"Reminder: If you encounter any problems, please contact customer service in time, buy a subscription at alongshare, enjoy VIP customer service, and do not need to change the number for renewal.",
+
+        "youtubeloginemail":"Enter your YouTube login email. Be sure to use your login email address to join the family group,\n" +
+            "                                                otherwise you will be kicked out of the family. If you need help, please contact Alongshare Customer Service via email on the ",
+        "aftersalesservice":"after sales service",
+        "support":"support page.",
+        "submit":"submit",
+
+        "buyit":"There are no subscriptions yet, please hurry to buy it",
+        "paymentsucceeded":"Payment succeeded",
+        "month":"Please select a month",
+        "number":"Please select the number of screens",
+        "purchase":"Please select the purchase type",
+        "payment":"Please select the payment method",
+        "name":"Please enter Name on card",
+        "card":"Please enter Card number",
+        "cvv":"Please enter CVV",
+        "expirydate":"Please enter Expiry date",
+        "processing":"Processing status has been submitted. Check the processing status on the work order.",
+        "cannotempty":"Discount code cannot be empty!",
+        "originalpassword":"The original password for this operation will no longer be used, whether to continue?",
+        "passwordmeets":"The password meets uppercase and lowercase letters, numbers and special characters, any combination of three of them, and the length is between 8 and 16!"
+    },
     userinfo:{
         "signout":"Sign out",
         "nickname":"Nickname",
         "avatar":"Avatar",
-        "uploadavatar":"Please upload your avatar"
+        "uploadavatar":"Please upload your avatar",
+        "logout":"Are you sure you want to log out?",
+        "onlyjpgpng":"Uploaded pictures can only be in JPG | png format",
+        "cannotexceed":"The size of the uploaded image cannot exceed 5MB!"
+    },
+    wish:{
+        "wish":"Wish",
+        "help":"AlongShare will choose some wishes to help",
+        "christmas":"them come true when Christmas comes, leave your wish",
+        "submit":"Submit",
+        "mywish":"my wish"
     },
     map:{
         "home":"Home",
@@ -234,7 +317,7 @@ const en = {
         "wish":"Wish",
         "helpcenter":"Help Center",
         "tradingstamps":"trading stamps",
-    }
+    },
 }
 
 export default en

@@ -216,11 +216,97 @@ const kr = {
         "passwordagain":"암호를 다시 입력하십시오.",
         "verificationsend":"인증 코드가 전송되었습니다. 확인하십시오.",
     },
+    luckdraw:{
+        "lotteryticket":"복권",
+        "integral":"적분",
+        "welcome":"alongshare에 오신 것을 환영합니다. 이것은 우리의 활동 페이지입니다. 카드를 클릭하면 한 번의 클릭으로 경품을 받을 수 있습니다.\n" +
+            "                                    보상에는 다양한 무료 계정 패키지가 포함되며,\n" +
+            "                                    할인 코드 및 기타 할인, 귀하의 지원과 신뢰에 감사드립니다.",
+        "none":"없음",
+        "redemptioncode":"상환 코드",
+        "copy":"복사",
+        "prizelist":"상품 목록",
+        "notused":"사용하지 않았다",
+        "used":"이미 사용 된",
+        "expired":"만료",
+
+        "prizeno":"상품번호",
+        "contents":"내용물",
+        "exchangedate":"교환 날짜",
+        "createtime":"생성시간",
+        "exchange":"환전",
+        "insufficientpoints":"불충분한 포인트!",
+        "consumepoints":"10포인트를 소모하시겠습니까?",
+        "tips":"팁",
+        "comfirm":"확인",
+        "cancel":"취소",
+        "failtowin":"수상에 실패하다",
+        "congratulations":"취득을 축하합니다",
+        "copysucceeded":"복사 성공!",
+        "copyfailed":"복사 실패!",
+    },
+    subscribe:{
+        "renewnow":"계속 구매",
+        "subscription":"같은 제품을 계속 구매",
+        "independent":"4K+HDR HD, 독립 시청 기록",
+        "guarantee":"환불 보증",
+        "timeleft":"남은 시간",
+        "openingtime":"계좌 개설 시간",
+        "endtime":"종료 시간",
+        "account":"계정",
+        "password":"비밀번호",
+        "profile":"소개",
+        "pleaseuse":"사용 해주세요 NO.",
+        "subaccount":"서브 계정",
+        "myprofile":"내 프로필이 누군가에 의해 오용되었습니다！",
+        "renew":"고쳐 쓰다",
+        "aftersales":"애프터 서비스",
+
+        "yourownsub":"1.일련번호에 따라 본인 서브계정을 이용해주세요.",
+        "delete":"2.다른 하위 계정을 수정/삭제하지 마십시오.",
+        "modifysubscription":"3.구독 관련 정보 수정 금지",
+        "reminder":"알림 ：어떤 문제가 발생할 경우 즉시 고객 서비스에 연락하여 Along Share에서 서브스크립션을 구매하여 VIP 고객 서비스를 즐기실 수 있으며, 리필 시 번호 변경이\n" +
+            "                                        필요 없습니다.",
+
+        "youtubeloginemail":"YouTube 로그인 이메일을 입력하세요. 로그인 이메일 주소를 사용하여 가족 그룹에 가입해야 합니다.\n" +
+            "                                                그렇지 않으면 가족에서 쫓겨날 것입니다. 도움이 필요하시면 이메일을 통해 Alongshare 고객 서비스에 문의하십시오.\n" +
+            "                                                play.google.com 계정 국가/지역을 확인하세요: ES, FR, PL, IT, DE, NL, GB, CA, US, JP, GR, CH, LT, PA, SG, CZ, SE,\n" +
+            "                                                PT, BE , 일리노이. 문제가 발생하면 시간 내에 티켓을 통해 직원에게 문의하십시오.",
+        "aftersalesservice":"애프터 서비스",
+        "support":"지원 페이지.",
+        "submit":"제출하다",
+
+        "buyit":"아직 구독이 안 되었으니 서둘러 구입해 주세요",
+        "paymentsucceeded":"결제 성공",
+        "month":"월을 선택하세요.",
+        "number":"하위 계정 수를 선택하세요.",
+        "purchase":"구매유형을 선택해주세요",
+        "payment":"결제수단을 선택해주세요",
+        "name":"카드 소유자 이름을 입력하십시오",
+        "card":"카드번호를 입력해주세요",
+        "cvv":"CVV를 입력하세요.",
+        "expirydate":"만료 날짜를 입력하세요.",
+        "processing":"처리 상태가 제출되었습니다. 작업 주문서에서 처리 상태를 확인하십시오.",
+        "cannotempty":"Discount code cannot be empty!",
+        "originalpassword":"The original password for this operation will no longer be used, whether to continue?",
+        "passwordmeets":"The password meets uppercase and lowercase letters, numbers and special characters, any combination of three of them, and the length is between 8 and 16!"
+
+    },
     userinfo:{
         "signout":"로그아웃",
         "nickname":"닉네임",
         "avatar":"두상",
-        "uploadavatar":"아바타를 업로드하세요"
+        "uploadavatar":"아바타를 업로드하세요",
+        "logout":"로그아웃하시겠습니까?",
+        "onlyjpgpng":"업로드된 사진은 JPG | png 형식만 가능합니다.",
+        "cannotexceed":"업로드된 이미지의 크기는 5MB를 초과할 수 없습니다!"
+    },
+    wish:{
+        "wish":"상품 목록",
+        "help":"AlongShare는 도움이 되고자 하는 소망을 선택합니다.",
+        "christmas":"크리스마스가 오면 이루어진다 소원을 담아",
+        "submit":"제출하다",
+        "mywish":"내 소원"
     },
     map:{
         "home":"홈페이지",
@@ -233,7 +319,7 @@ const kr = {
         "wish":"희망",
         "helpcenter":"도움말 센터",
         "tradingstamps":"환전",
-    }
+    },
 }
 
 export default kr

@@ -57,9 +57,6 @@ const api = {
 
     //订单提交
     orderSubmit:"orderinfo/submit",
-    // payssion
-    payssion:"orderinfo/payment",
-
 
     //续费
     orderRenew:"orderinfo/renew",
