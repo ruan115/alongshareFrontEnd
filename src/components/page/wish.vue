@@ -5,20 +5,22 @@
             <img @click="getMessageList" src="https://alongshare.oss-eu-west-1.aliyuncs.com/frontend/wishmiddle.png" style="transform: scale(1.5);height: 100%;">
         </div>
         <div class="middlebutton justify-center">
-            <el-button type="primary" class="btn" round @click="clkwish" v-show="flagwish">wish</el-button>
+            <el-button type="primary" class="btn" round @click="clkwish" v-show="flagwish">{{$t('wish.wish')}}</el-button>
         </div>
 <!--        <div class="bottomback"></div>-->
 
         <el-dialog customClass="customWidth" :visible.sync="dialogFormVisible" :close-on-press-escape="false" :close-on-click-modal="false" :before-close="closeDialog">
             <div class="justify-center">
-                <span class="wishtext">wish</span>
+                <span class="wishtext">{{$t('wish.wish')}}</span>
             </div>
             <div class="title">
                 <div class="justify-center">
-                    <div class="titletxt">AlongShare will choose some wishes to help </div>
+<!--                    <div class="titletxt">AlongShare will choose some wishes to help </div>-->
+                    <div class="titletxt">{{$t('wish.help')}}</div>
                 </div>
                 <div class="justify-center">
-                    <div class="titletxt">them come true when Christmas comes, leave your wish</div>
+<!--                    <div class="titletxt">them come true when Christmas comes, leave your wish</div>-->
+                    <div class="titletxt">{{$t('wish.christmas')}}</div>
                 </div>
             </div>
             <el-form :model="form" :rules="rules" ref="ruleUser">
@@ -28,13 +30,13 @@
             </el-form>
             <div class="justify-center">
                 <!-- <el-button type="primary" @click="submitUser">Submit</el-button> -->
-                <el-button type="primary" @click="submitUser">제출</el-button>
+                <el-button type="primary" @click="submitUser">{{$t('wish.submit')}}</el-button>
             </div>
         </el-dialog>
 
         <el-dialog customClass="customWidth" :visible.sync="dialogFormVisibleList">
             <div class="justify-center">
-                <span class="wishtext">my wish</span>
+                <span class="wishtext">{{$t('wish.mywish')}}</span>
             </div>
             <el-data-table ref="table" v-bind="tableConfig" :columns="columns">
             </el-data-table>

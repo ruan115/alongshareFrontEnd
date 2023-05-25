@@ -98,11 +98,11 @@ export default {
     methods: {
         lognout() {
             // this.$confirmel('Are you sure you want to log out?', 'Tips', {
-            this.$confirmel('로그아웃하시겠습니까??', '팁', {
+            this.$confirmel(this.$t('userinfo.logout'), this.$t('luckdraw.tips'), {
                 // confirmButtonText: 'comfirm',
-                confirmButtonText: '확인',
+                confirmButtonText: this.$t('luckdraw.comfirm'),
                 // cancelButtonText: 'cancel',
-                cancelButtonText: '취소',
+                cancelButtonText: this.$t('luckdraw.cancel'),
                 type: 'warning'
             }).then(() => {
                 this.logout()
@@ -164,12 +164,13 @@ export default {
 
             if (!isJPG) {
                 // this.$message.error('Uploaded pictures can only be in JPG | png format');
-                this.$message.error('업로드된 사진은 JPG | png 형식만 가능합니다.');
-
+                // this.$message.error('업로드된 사진은 JPG | png 형식만 가능합니다.');
+                this.$message.error(this.$t('userinfo.onlyjpgpng'));
             }
             if (!isLt2M) {
                 // this.$message.error('The size of the uploaded image cannot exceed 5MB!');
-                this.$message.error('업로드된 이미지의 크기는 5MB를 초과할 수 없습니다!!');
+                // this.$message.error('업로드된 이미지의 크기는 5MB를 초과할 수 없습니다!!');
+                this.$message.error(this.$t('userinfo.cannotexceed'));
             }
             return isJPG && isLt2M;
         },
